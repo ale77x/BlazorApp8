@@ -1,6 +1,6 @@
 # BlazorApp8
 
-App laboratorio usata come esercitazione prendendo spunto dal video https://www.youtube.com/watch?v=NbfhbDKiFpM
+Esempio per la realizzazione di una Web App Blazor in .NET 8
 
 1-Crea in Visual Studio un progetto di tipo Blazor Web App
 
