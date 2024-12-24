@@ -1,4 +1,4 @@
-# OD533_BlazorApp
+# BlazorApp8
 
 App laboratorio usata come esercitazione prendendo spunto dal video https://www.youtube.com/watch?v=NbfhbDKiFpM
 
