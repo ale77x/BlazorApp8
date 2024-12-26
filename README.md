@@ -17,3 +17,7 @@ Esempio per la realizzazione di una Web App Blazor in .NET 8
 5-Selezioniamo queste opzioni:
 
 ![Logo](https://github.com/ale77x/BlazorApp8/raw/master/Docs/Screenshot_3.png)
+
+6-Ora troveremo tr le Pages, le pagine che potranno gestire le operazioni sull'oggetto
+
+![Logo](https://github.com/ale77x/BlazorApp8/raw/master/Docs/Screenshot_4.png)
