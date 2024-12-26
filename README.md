@@ -21,3 +21,12 @@ Esempio per la realizzazione di una Web App Blazor in .NET 8
 6-Ora troveremo tra le Pages, le pagine che potranno gestire le operazioni sull'oggetto,compresa una pagina Index contenente un componente QuickGrid
 
 ![Logo](https://github.com/ale77x/BlazorApp8/raw/master/Docs/Screenshot_4.png)
+
+7-Inseriamo un operazione di migrazione in modo da generare un Database che rifletta la struttura delle nostre classi
+![Logo](https://github.com/ale77x/BlazorApp8/raw/master/Docs/Screenshot_5.png)
+
+8-Diamole un nome, selezioniamo il DBContext.
+![Logo](https://github.com/ale77x/BlazorApp8/raw/master/Docs/Screenshot_6.png)
+
+9-una volta fatto dovremo selezionare anche Update database
+
