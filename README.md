@@ -10,4 +10,10 @@ Esempio per la realizzazione di una Web App Blazor in .NET 8
 
 ![Logo](https://github.com/ale77x/BlazorApp8/raw/master/Docs/Screenshot_1.png)
 
+4-Selezioniamo un nuovo componente Razor che implementi le operazioni CRUD
+
 ![Logo](https://github.com/ale77x/BlazorApp8/raw/master/Docs/Screenshot_2.png)
+
+5-Selezioniamo queste opzioni:
+
+![Logo](https://github.com/ale77x/BlazorApp8/raw/master/Docs/Screenshot_3.png)
