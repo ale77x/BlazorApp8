@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using BlazorApp8.Models;
+using BlazorApp8.Data;
 
 namespace BlazorApp8.Data
 {
-    public class BlazorApp8Context : DbContext
+    public class BlazorApp8Context(DbContextOptions<BlazorApp8Context> options) : IdentityDbContext<BlazorApp8User>(options)
     {
-        public BlazorApp8Context (DbContextOptions<BlazorApp8Context> options)
-            : base(options)
-        {
-        }
-
         public DbSet<BlazorApp8.Models.Vehicle> Vehicle { get; set; } = default!;
     }
 }

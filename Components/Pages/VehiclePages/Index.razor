@@ -15,9 +15,15 @@
     <a href="vehicles/create">Create New</a>
 </p>
 
-<QuickGrid Class="table" Items="context.Vehicle" Pagination="pagState">
+<QuickGrid Class="table" Items="filteredVehicles" Pagination="pagState">
     <PropertyColumn Property="vehicle => vehicle.Make" Sortable="true" />
-    <PropertyColumn Property="vehicle => vehicle.Model" Sortable="true" />
+
+    <PropertyColumn Property="vehicle => vehicle.Model" Sortable="true">
+        <ColumnOptions>
+            <input type="search" autofocus @bind="modelFilter" @bind:event="oninput" />
+        </ColumnOptions>
+    </PropertyColumn>
+
     <PropertyColumn Property="vehicle => vehicle.Year" />
     <PropertyColumn Property="vehicle => vehicle.LicensePlate" Title="License plate" />
 
@@ -28,12 +34,12 @@
     </TemplateColumn>
 </QuickGrid>
 
-<Paginator  State="pagState" />
+<Paginator State="pagState" />
 
 @code {
     private BlazorApp8Context context = default!;
 
-    PaginationState pagState = new PaginationState() { ItemsPerPage=1 };
+    PaginationState pagState = new PaginationState() { ItemsPerPage = 5 };
 
     protected override void OnInitialized()
     {
@@ -41,4 +47,8 @@
     }
 
     public async ValueTask DisposeAsync() => await context.DisposeAsync();
+
+    string modelFilter = string.Empty;
+
+    IQueryable<Vehicle> filteredVehicles => context.Vehicle.Where(v => v.Model.Contains(modelFilter));
 }
