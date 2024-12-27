@@ -26,6 +26,7 @@ Esempio per la realizzazione di una Web App Blazor in .NET 8
 ![Logo](https://github.com/ale77x/BlazorApp8/raw/master/Docs/Screenshot_5.png)
 
 8-Diamole un nome, selezioniamo il DBContext.
+
 ![Logo](https://github.com/ale77x/BlazorApp8/raw/master/Docs/Screenshot_6.png)
 
 9-una volta fatto dovremo selezionare anche Update database
