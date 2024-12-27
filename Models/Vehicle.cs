@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace OD533_BlazorApp.Models
+namespace BlazorApp8.Models
 {
     public class Vehicle
     {
@@ -16,5 +16,13 @@ namespace OD533_BlazorApp.Models
         public int Year { get; set; }
 
         public string? LicensePlate { get; set; }
+
+        // Costruttore che inizializza Make e Model
+        public Vehicle()
+        {
+            Make = string.Empty;
+            Model = string.Empty;
+        }
+
     }
 }

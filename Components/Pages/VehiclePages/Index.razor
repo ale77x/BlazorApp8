@@ -1,0 +1,44 @@
+﻿@page "/vehicles"
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using BlazorApp8.Models
+@using BlazorApp8.Data
+@implements IAsyncDisposable
+@inject IDbContextFactory<BlazorApp8.Data.BlazorApp8Context> DbFactory
+@rendermode InteractiveServer
+
+<PageTitle>Index</PageTitle>
+
+<h1>Index</h1>
+
+<p>
+    <a href="vehicles/create">Create New</a>
+</p>
+
+<QuickGrid Class="table" Items="context.Vehicle" Pagination="pagState">
+    <PropertyColumn Property="vehicle => vehicle.Make" Sortable="true" />
+    <PropertyColumn Property="vehicle => vehicle.Model" Sortable="true" />
+    <PropertyColumn Property="vehicle => vehicle.Year" />
+    <PropertyColumn Property="vehicle => vehicle.LicensePlate" Title="License plate" />
+
+    <TemplateColumn Context="vehicle">
+        <a href="@($"vehicles/edit?id={vehicle.Id}")">Edit</a> |
+        <a href="@($"vehicles/details?id={vehicle.Id}")">Details</a> |
+        <a href="@($"vehicles/delete?id={vehicle.Id}")">Delete</a>
+    </TemplateColumn>
+</QuickGrid>
+
+<Paginator  State="pagState" />
+
+@code {
+    private BlazorApp8Context context = default!;
+
+    PaginationState pagState = new PaginationState() { ItemsPerPage=1 };
+
+    protected override void OnInitialized()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}
